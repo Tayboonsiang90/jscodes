@@ -1,3 +1,7 @@
+//Can only assign values and references to variables
+
+//integer float string boolean primitives
+
 
 
 let secretOfLife = 42;
@@ -11,3 +15,6 @@ console.log(secretOfLife);
 //reassign variables
 secretOfLife = 43;
 console.log("secretOfLife =", secretOfLife);
+
+
+
