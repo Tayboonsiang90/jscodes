@@ -51,18 +51,49 @@
 
 //memoization
 
-function minCost(i, cost) {
-    if (minCostArray.length <= i) { 
-        minCostArray[i] = cost[i] + Math.min(minCost(i-1, cost), minCost(i-2, cost)) 
-    }
-    return minCostArray[i]
-}
+// function minCost(i, cost) {
+//     if (minCostArray.length <= i) { 
+//         minCostArray[i] = cost[i] + Math.min(minCost(i-1, cost), minCost(i-2, cost)) 
+//     }
+//     return minCostArray[i]
+// }
 
+
+// var minCostClimbingStairs = function(cost) {
+//     minCostArray = [cost[0], cost[1]]
+//     len = cost.length
+//     return Math.min(minCost(len-1, cost), minCost(len-2, cost))
+// };
+
+// cost = [1,2,3,4,5]
+// console.log(minCostClimbingStairs(cost))
+
+//remove recursion by constructing mincostarray
+
+// var minCostClimbingStairs = function(cost) {
+//     minCostArray = [cost[0], cost[1]]
+//     len = cost.length
+//     for (let i=2; i < len; i++) {
+//         minCostArray[i] = cost[i] + Math.min(minCostArray[i-1], minCostArray[i-2])
+//     }
+//     return Math.min(minCostArray[len-1], minCostArray[len-2])
+// };
+
+// cost = [1,2,3,4,5]
+// console.log(minCostClimbingStairs(cost))
+
+//reduce space
 
 var minCostClimbingStairs = function(cost) {
-    minCostArray = [cost[0], cost[1]]
+    let cost0 = cost[0]
+    let cost1 = cost[1]
     len = cost.length
-    return Math.min(minCost(len-1, cost), minCost(len-2, cost))
+    for (let i=2; i < len; i++) {
+        temp = cost0
+        cost0 = cost1
+        cost1 = cost[i] + Math.min(temp, cost0)
+    }
+    return Math.min(cost0, cost1)
 };
 
 cost = [1,2,3,4,5]
