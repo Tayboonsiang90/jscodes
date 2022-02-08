@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "elliptic": "^6.5.4",
+    "ethers": "^5.5.4",
+    "keccak": "^3.0.2",
     "prompt-sync": "^4.2.0",
     "yarn": "^1.22.17"
   }
