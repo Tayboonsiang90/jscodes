@@ -1,0 +1,17 @@
+[
+    {
+        "sku":"ACME_HAMMER1",
+        "name":"Hammer1",
+        "price": 1
+    },
+    {
+        "sku":"ACME_HAMMER2",
+        "name":"Hammer2",
+        "price": 2
+    },
+    {
+        "sku":"ACME_HAMMER3",
+        "name":"Hammer3",
+        "price": 3
+    }
+]

@@ -1,0 +1,32 @@
+/* This will select all li elements */
+li {
+    background-color: skyblue;
+}
+
+#important{
+    background-color: red;
+}
+
+/* More specificity = more priority */
+li#important{
+    background-color: grey;
+}
+
+.good-to-have{
+    background-color: yellow;
+}
+
+/* parent child selector */
+/* All children is selected no matter how nested is it */
+#content p{
+    border: 1px black solid;
+}
+
+/* If you want immediate child only, then use this */
+/* pseudo selector if you want only the first, second paragraph */
+#article > p{
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
